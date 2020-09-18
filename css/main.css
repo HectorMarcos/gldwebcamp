@@ -213,27 +213,28 @@ h1.nombre-sitio {
 
 /* Barra */
 
-div.barra{
-  background-color: #353535;
-  padding: 20px 0;
+div.contenedor-navegacion{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 div.logo{
   width: 80%;
 }
 div.logo img{
   width: 100%;
+  flex: 0 1 auto;
 }
-@media (min-width: 768px) {
-  div.logo img{
-    width: 33%;
-    float: left;
-  }
+div.navegacion-principal{
+  display: flex;
+  flex-direction: column;
 }
 
-/* Navegacion Principla */
-
-nav.navegacion-principal{
-  display: none;
+div.barra{
+  background-color: #353535;
+  padding: 20px 0;
 }
 nav.navegacion-principal a{
   font-family: "Oswald", sans-serif;
@@ -242,6 +243,8 @@ nav.navegacion-principal a{
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color .3s ease-in-out;
+  text-align: center;
+  margin-right: 20px;
 }
 nav.navegacion-principal a:hover{
   background-color: #fe4918;
@@ -249,11 +252,69 @@ nav.navegacion-principal a:hover{
 nav.navegacion-principal a:last-child{
   border: 2px solid #fe4918;
   color: #fe4918;
+  margin-right: 0;
 }
 nav.navegacion-principal a:last-child:hover{
   color: white;
   border: 2px solid white;
 }
+/* nav.navegacion-principal{
+  display: none;
+} */
+
+
+@media (min-width: 768px) {
+  nav.navegacion-principal{
+    display: block;
+    justify-content: space-between;
+  }
+  div.logo{
+    width: 40%;
+  }
+}
+
+/* Tres Barritas Menú Movil */
+
+div.menu-movil{
+  width: 60px;
+  display: block;
+  float: right;
+  text-align: right;
+}
+div.menu-movil span{
+  height: 8px;
+  margin-bottom: 6px;
+  margin-right: 20px;
+  background-color: white;
+  display: block;
+}
+div.menu-movil span:hover{
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  div.menu-movil{
+    display: none;
+  }
+}
+
+/* div.logo{
+  width: 80%;
+  float: left;
+}
+div.logo img{
+  width: 100%;
+}
+@media (min-width: 768px) {
+  div.logo img{
+    width: 33%;
+  }
+} */
+
+/* Navegacion Principla */
+
+/* nav.navegacion-principal{
+}
+
 @media (min-width: 768px) {
   nav.navegacion-principal{
     display: 67%;
@@ -265,12 +326,17 @@ nav.navegacion-principal a:last-child:hover{
     margin-right: 10px;
     display: inline-block;
     padding: 10px 10px;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+
   }
-}
+} */
 
 /* Menú movil */
 
-div.menu-movil{
+/* div.menu-movil{
   width: 60px;
   display: block;
   float: right;
@@ -291,7 +357,7 @@ div.menu-movil span:hover{
     display: none;
   }
 }
-
+ */
 
 
 
